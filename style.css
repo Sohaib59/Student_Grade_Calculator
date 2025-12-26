@@ -1,0 +1,147 @@
+/* Google Font (optional but recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Background */
+body {
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #92af0e, #c9dc55, #6f8508, #b8cf2e);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glass Card Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 70px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 25px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inner Content */
+.screen-body-item {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    margin: 14px 0;
+    padding: 15px 18px;
+    font-size: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #f3f5ea;
+    box-shadow: inset 6px 6px 12px #d8dabf,
+                inset -6px -6px 12px #ffffff;
+    outline: none;
+    transition: all 0.35s ease;
+}
+
+/* Input Focus Effect */
+input:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(146, 175, 14, 0.4),
+                0 10px 25px rgba(146, 175, 14, 0.35);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background: linear-gradient(135deg, #92af0e, #6f8508);
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* Result Box */
+.showdata {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 16px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    background: linear-gradient(135deg, #f6f9dc, #e3ec9d);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    animation: popUp 0.6s ease;
+}
+
+/* Result Animation */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 25px;
+    }
+
+    .showdata {
+        font-size: 1.4rem;
+    }
+}
